@@ -1,0 +1,6 @@
+*~
+.DS_Store
+font-doc/*.log
+font-doc/*.pdf
+font-doc/*.tuc
+font-doc/glyphdims/*.pdf

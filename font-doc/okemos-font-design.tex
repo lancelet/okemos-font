@@ -1,0 +1,40 @@
+\usemodule[tabl]
+
+\setupexternalfigures[directory=.,conversion=pdf]
+
+%----- GLYPH DIMENSION FIGURE -----
+\define[1]\GlyphFig{%
+    \placefigure[here][fig:#1]{\tt #1}{%
+        \externalfigure[glyphdims/#1.svg][width=0.75\textwidth,frame=on]
+    }
+}
+
+\starttext
+
+\chapter[chp:glyph-designs]{Glyph Designs at Original Weight}
+
+\section[sec:latin-capitals]{Latin Capitals}
+
+Table \in{Table}{}[tab:latin-capitals] describes the origin of the glyphs for the latin capital letters.
+
+\placetable[here][tab:latin-capitals]
+    {Definitions of Latin capital letter glyphs.}{
+    \starttabulate[|l|l|]
+        \NC {\bf Character} \NC {\bf Definition} \NC\NR
+        \HL
+        \NC A \NC \in{Figure}{}[fig:latin-capital-letter-a] \NC\NR
+        \NC B \NC \in{Figure}{}[fig:latin-capital-letter-b] \NC\NR
+        \NC C \NC \in{Figure}{}[fig:latin-capital-letter-c] \NC\NR
+        \NC D \NC Follows the design of B \NC\NR
+        \NC E \NC \in{Figure}{}[fig:latin-capital-letter-e] \NC\NR
+        \NC F \NC Follows the design of E \NC\NR
+    \stoptabulate
+}
+
+
+\GlyphFig{latin-capital-letter-a}
+\GlyphFig{latin-capital-letter-b}
+\GlyphFig{latin-capital-letter-c}
+\GlyphFig{latin-capital-letter-e}
+
+\stoptext
